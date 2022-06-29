@@ -1,6 +1,6 @@
 {
   "name": "quasar-project",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A Quasar Project",
   "productName": "Quasar App",
   "author": "Tobias Mesquita <tobias.mesquita@gmail.com>",
@@ -12,7 +12,7 @@
     "lint": "eslint --ext .js,.ts,.vue ./",
     "format": "prettier --write \"**/*.{js,ts,vue,scss,html,md,json}\" --ignore-path .gitignore",
     "test": "echo \"No test specified\" && exit 0",
-    "deploy": "node --loader ts-node/esm ./deploy.mts -s=app -i=demo-app-ssr --previous=previous"
+    "deploy": "npx ts-node --project tsconfig.dev.json deploy -s=app -i=demo-app-ssr --previous=previous"
   },
   "dependencies": {
     "@quasar/extras": "^1.0.0",

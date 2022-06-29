@@ -1,6 +1,6 @@
 {
   "name": "quasar-project",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A Quasar Project",
   "productName": "Quasar App",
   "author": "Tobias Mesquita <tobias.mesquita@gmail.com>",
@@ -11,7 +11,8 @@
     "serve": "docker compose -f docker-compose.yml -f docker-compose.build.yml up -d",
     "lint": "eslint --ext .js,.ts,.vue ./",
     "format": "prettier --write \"**/*.{js,ts,vue,scss,html,md,json}\" --ignore-path .gitignore",
-    "test": "echo \"No test specified\" && exit 0"
+    "test": "echo \"No test specified\" && exit 0",
+    "deploy": "node --loader ts-node/esm ./deploy.mts -s=app -i=demo-app-ssr --previous=previous"
   },
   "dependencies": {
     "@quasar/extras": "^1.0.0",
@@ -31,7 +32,8 @@
     "eslint": "^8.10.0",
     "eslint-config-prettier": "^8.1.0",
     "eslint-plugin-vue": "^8.5.0",
-    "prettier": "^2.5.1"
+    "prettier": "^2.5.1",
+    "ts-node": "^10.8.1"
   },
   "browserslist": [
     "last 10 Chrome versions",

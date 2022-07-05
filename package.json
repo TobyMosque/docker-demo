@@ -12,7 +12,7 @@
     "lint": "eslint --ext .js,.ts,.vue ./",
     "format": "prettier --write \"**/*.{js,ts,vue,scss,html,md,json}\" --ignore-path .gitignore",
     "test": "echo \"No test specified\" && exit 0",
-    "deploy": "npx ts-node --project tsconfig.dev.json deploy -s=app -i=demo-app-ssr --previous=previous"
+    "deploy": "npx ts-node --project tsconfig.deploy.json deploy -s=app -i=demo-app-ssr --previous=previous"
   },
   "dependencies": {
     "@quasar/extras": "^1.0.0",
